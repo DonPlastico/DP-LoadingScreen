@@ -1,0 +1,264 @@
+:root {
+	--primary-color: rgba(255, 255, 255, 1);
+	--secondary-color: rgba(255, 255, 255, 0.8);
+	--bg-color: rgba(0, 0, 0, 0.9);
+	--hover-color: rgba(255, 255, 255, 0.2);
+	--border-color: rgba(255, 255, 255, 0.1);
+	--progress-bar-color: rgba(255, 255, 255, 0.61);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.mute {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	margin: 1vh auto;
+	width: 100%;
+	text-align: center;
+	color: var(--primary-color);
+	font-family: 'Quicksand';
+	font-weight: 500;
+	text-shadow: 0 0 20px var(--bg-color), 0 0 20px var(--bg-color), 0 0 20px var(--bg-color);
+}
+
+.mute p {
+	margin: 0 0.5vh;
+	background: var(--primary-color);
+	color: var(--bg-color);
+	padding: 0.2vh 0.5vh;
+	border-radius: 0.3vh;
+	font-weight: 600;
+	text-shadow: none;
+	font-size: 1.3vh;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	/* Asegura que el video cubra toda la pantalla */
+}
+
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.bgtrueblack {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 99999;
+	transition: 4s ease-in-out all;
+}
+
+.bgtrueblack.show {
+	opacity: 1;
+	transition: 2s ease-in-out all;
+}
+
+.container {
+	width: 475px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 20%;
+	opacity: 0;
+	animation: entrada 1s ease-in-out forwards;
+	text-align: center;
+}
+
+.progress {
+	position: fixed;
+	bottom: -3vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.31);
+	height: 2.5vh;
+	border: 0.1vh solid var(--border-color);
+	border-radius: 5px;
+}
+
+.sombra {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('[https://placehold.co/1920x1080/000000/FFFFFF.png?text=sombra](https://placehold.co/1920x1080/000000/FFFFFF.png?text=sombra)');
+	/* Usamos un placeholder genérico */
+	opacity: 0.5;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 5;
+}
+
+.bottom {
+	left: 7%;
+	width: 86%;
+	position: absolute;
+	bottom: 7.5vh;
+	transform: translateY(10vh);
+	opacity: 0;
+	transition: cubic-bezier(0, 0.605, 0.145, 1.005) 2s all;
+	transition-delay: 0.5s;
+	z-index: 15;
+}
+
+.loading.show .bottom {
+	transform: translateY(0vh);
+	opacity: 1;
+}
+
+.flex-bottom {
+	display: flex;
+	color: var(--primary-color);
+	justify-content: space-between;
+	align-items: center;
+}
+
+.accediendo {
+	font-family: Quicksand;
+	font-size: 2.5vh;
+	text-shadow: 0 0 20px var(--bg-color), 0 0 20px var(--bg-color), 0 0 20px var(--bg-color);
+	font-weight: 500;
+}
+
+.barra {
+	width: 50%;
+	height: 100%;
+	background-color: var(--progress-bar-color);
+	background: linear-gradient(33deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+	background-size: 400% 400%;
+	box-shadow: 0 0 20px var(--bg-color);
+	border-radius: 5px 0 0 5px;
+	transition: 0.25s linear all;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10vh;
+	display: none;
+	z-index: 20;
+}
+
+.loading.show .logo {
+	display: block;
+}
+
+.logo img {
+	width: 100%;
+}
+
+@media (width: 2560px) and (height: 1080px) {
+	.container {
+		margin-top: 11% !important;
+	}
+}
+
+@keyframes entrada {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 100;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 100;
+	}
+}
+
+.dot-1 {
+	animation: fadeInDot 2s ease-in-out infinite;
+	animation-delay: 0.2s !important;
+	display: inline-block;
+}
+
+.dot-2 {
+	animation-delay: 0.4s !important;
+	animation: fadeInDot 2s ease-in-out infinite;
+	display: inline-block;
+	margin-left: -0.1vh;
+}
+
+.dot-3 {
+	animation-delay: 0.6s !important;
+	animation: fadeInDot 2s ease-in-out infinite;
+	display: inline-block;
+	margin-left: -0.1vh;
+}
+
+@keyframes fadeInDot {
+	0% {
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 1;
+	}
+}
+
+/* Nuevos estilos para el ticker de texto */
+.ticker-wrap {
+	position: absolute;
+	bottom: 4.5vh;
+	width: 100%;
+	overflow: hidden;
+	color: var(--primary-color);
+	text-shadow: 0 0 10px var(--bg-color);
+	font-family: 'Quicksand';
+}
+
+.ticker-wrap .ticker {
+	display: inline-block;
+	white-space: nowrap;
+	padding-left: 100%;
+	animation: ticker 30s linear infinite;
+	/* Aumentado el tiempo para que vaya más lento */
+}
+
+.ticker-wrap .ticker-text {
+	font-size: 1.5vh;
+}
+
+@keyframes ticker {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
+}

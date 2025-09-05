@@ -1,0 +1,65 @@
+<html>
+
+<head>
+	<title>DP-Loadscreen</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+
+<body style="overflow: hidden">
+	<!-- Elemento de video para el fondo -->
+	<video autoplay loop muted id="myVideo" style="display: none;">
+		<source id="video" type="video/mp4">
+	</video>
+
+	<!-- Contenedor principal de la pantalla de carga -->
+	<div class="loading">
+		<!-- Logotipo en la esquina superior derecha -->
+		<div class="logo">
+			<img src="" alt="" />
+		</div>
+
+		<!-- Sección inferior con texto y barra de progreso -->
+		<div class="bottom">
+			<div class="flex-bottom">
+				<!-- Mensaje principal de acceso al servidor -->
+				<div class="accediendo">
+					<span class="loading_text">Accediendo al servidor</span>
+					<span class="dot-animation">
+						<span class="dot-1">.</span>
+						<span class="dot-2">.</span>
+						<span class="dot-3">.</span>
+					</span>
+				</div>
+			</div>
+
+			<!-- Contenedor de la barra de progreso y el mensaje de mutear -->
+			<div class="progress">
+				<div class="barra"></div>
+				<span class="mute">Presiona <p>ESPACIO</p> para mutear</span>
+			</div>
+
+			<!-- Ticker de texto animado con mensajes del servidor -->
+			<div class="ticker-wrap">
+				<div class="ticker">
+					<span class="ticker-text"></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sombra o superposición para el fondo -->
+		<div class="sombra"></div>
+	</div>
+
+	<div class="bgtrueblack show"></div>
+
+	<!-- Scripts necesarios: jQuery, el archivo de configuración y el script principal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../config.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
