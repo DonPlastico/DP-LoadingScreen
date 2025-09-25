@@ -1,8 +1,26 @@
 Config = {};
 
 Config.ImageExtensions = ['png', 'jpg', 'webp']; // Extensiones de imagen para el fondo
-Config.Background = 'https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/VdeosinttuloHechoconClipchamp.mp4' // URL del video o imagen de fondo
+Config.Background = 'https://www.dropbox.com/scl/fi/b4x8ecpxiqhuv8s25a6og/INTRO-SERVER-1.mp4?rlkey=3we3bf8v3392n5xnnjjyqcch3&st=6vph9461&dl=1' // URL del video o imagen de fondo
 Config.Logo = 'https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/86506173.png' // URL del logo
+
+Config.Canciones = {
+    "Ailow - Dionysus": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/Ailow-Dionysus.mp3",
+    "Maestro Chives - Royalty": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/MaestroChives-Royalty.mp3",
+    "NEFFEX - As You Fade Away": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/NEFFEX-AsYouFadeAway.mp3",
+    "Max Brhon - Cyberpunk": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/MaxBrhon-Cyberpunk.mp3",
+    "Besomorph & Coopex - Redemption": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/BesomorphCoopex-Redemption.mp3",
+    "NIVIRO - Uncharted": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/NIVIRO-Uncharted.mp3",
+    "Infraction - Sport Motion": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/Infraction-SportMotion.mp3",
+    "Electronic Vibes - Don't Leave Me": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/ElectronicVibes-Don'tLeaveMe.mp3",
+    "Main Reaktor - Recession": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/MainReaktor-Recession.mp3",
+    "Spektrem - Shine": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/Spektrem-Shine.mp3",
+    "More Plastic - Amber Jay Sirens": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/MorePlastic-AmberJaySirens.mp3",
+    "More Plastic - So Good": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/MorePlastic-SoGood.mp3",
+    "The Void - Lost Language": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/TheVoid-LostLanguage.mp3",
+    "Bad Computer - Can't Heal You": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/BadComputer-Can'tHealYou.mp3",
+    "Cartoon LEOWI - Wait A While": "https://r2.fivemanage.com/Iv1pvu3tCAOfqtCnHdnXM/CartoonLEOWI-WaitAWhile.mp3",
+};
 
 // Mensajes que aparecerán en el ticker de texto
 Config.Messages = [
@@ -35,6 +53,4 @@ Config.Messages = [
 
 Config.Translates = {
     'loading': 'Accediendo al servidor',
-    'mute': 'Presiona <p>ESPACIO</p> para mutear',
-    'unmute': 'Presiona <p>ESPACIO</p> para desmutear',
 };
